@@ -54,7 +54,7 @@ if not HF_TOKEN:
 # ============================================================
 @st.cache_resource(show_spinner=False)
 def get_llm_client(): #this function will access the HF_TOKEN from Huggingface
-    return InferenceClient(model=MODEL_NAME, token=HF_TOKEN)
+    return InferenceClient(api_key=HF_TOKEN)
 
 
 @st.cache_resource(show_spinner=False)
